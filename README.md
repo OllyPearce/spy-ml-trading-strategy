@@ -28,32 +28,32 @@ After verifying the data with plots, run the label engineering and model trainin
 
 1. Generate Target Labels:
    python src/ml_label_engineering.py
-   - Calculates 60-day forward returns [2].
-   - Saves final training set to data/features/SPY_ml_dataset.parquet [3].
+   - Calculates 60-day forward returns.
+   - Saves final training set to data/features/SPY_ml_dataset.parquet.
 
 2. Train Walk Forward Model:
    python src/ml_walkforward_train.py
-   - Uses a Ridge regression pipeline with a 10-year training and 3-year testing window [4].
-   - Only trains and predicts during MA200 "Risk-On" regimes [5].
-   - Saves predictions to backtest/ml_results_regime_on.parquet [4].
+   - Uses a Ridge regression pipeline with a 10-year training and 3-year testing window.
+   - Only trains and predicts during MA200 "Risk-On" regimes.
+   - Saves predictions to backtest/ml_results_regime_on.parquet.
 
 ## Backtesting Strategy:
 
 Run the final strategy script to evaluate the Conservative Rank-ML performance:
 
 python src/backtest_rank_ml_ma200.py
-- Implements the Rank-to-Weight mapping: weight = 0.5 + K * (rank - 0.5) [6].
-- Targets 6% annual volatility with a 20-day lookback [6, 7].
-- Saves performance metrics to backtest/rank_ml_ma200_results.parquet [8, 9].
+- Implements the Rank-to-Weight mapping: weight = 0.5 + K * (rank - 0.5).
+- Targets 6% annual volatility with a 20-day lookback.
+- Saves performance metrics to backtest/rank_ml_ma200_results.parquets.
 
 ## Strategy Parameters (Conservative Run):
 
 The successful results in this repository were achieved using the following "Golden Path" parameters:
-- Horizon: 60-day forward returns [2].
-- K Value: 1.00 (Mapping sensitivity) [6, 7].
-- Target Volatility: 6.00% [6, 7].
-- Max Leverage: 1.50 cap [6].
-- Regime Filter: Price > MA200 [5, 10].
+- Horizon: 60-day forward returns.
+- K Value: 1.00 (Mapping sensitivity).
+- Target Volatility: 6.00%.
+- Max Leverage: 1.50 cap.
+- Regime Filter: Price > MA200.
 
 ## Final Performance Metrics:
 
