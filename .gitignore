@@ -16,6 +16,14 @@ data/features/*.parquet
 # Ignores output from src/backtest_rank_ml_ma200.py and training scripts
 backtest/*.parquet
 
+# The ** ensures Git ignores .parquet files in ALL subfolders of backtest/
+backtest/**/*.parquet
+
+# Ignores the summary CSVs from src/backtest_ma_research.py
+backtest/ma_research/*.csv
+
 # --- OS Specific Files ---
 .DS_Store
+
+
 
