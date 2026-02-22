@@ -1,0 +1,21 @@
+# --- Environment and Python Internals ---
+.venv/
+__pycache__/
+*.py[cod]
+
+# --- Raw Data ---
+# Ignores the raw download from src/download_spy.py
+data/raw/SPY_yfinance.csv
+
+# --- Cleaned and Engineered Data ---
+# Ignores files created by src/clean_spy.py and src/ml_label_engineering.py
+data/cleaned/*.parquet
+data/features/*.parquet
+
+# --- Backtest Results ---
+# Ignores output from src/backtest_rank_ml_ma200.py and training scripts
+backtest/*.parquet
+
+# --- OS Specific Files ---
+.DS_Store
+
