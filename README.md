@@ -26,12 +26,12 @@ python src/inspect_returns.py
 
 After verifying the data with plots, run the label engineering and model training scripts:
 
-1. Generate Target Labels:
+Generate Target Labels:
    python src/ml_label_engineering.py
    - Calculates 60-day forward returns.
    - Saves final training set to data/features/SPY_ml_dataset.parquet.
 
-2. Train Walk Forward Model:
+Train Walk Forward Model:
    python src/ml_walkforward_train.py
    - Uses a Ridge regression pipeline with a 10-year training and 3-year testing window.
    - Only trains and predicts during MA200 "Risk-On" regimes.
