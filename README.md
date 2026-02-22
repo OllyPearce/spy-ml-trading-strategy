@@ -6,7 +6,7 @@ that turns raw price data into a predictive dataset, this is achieved
 by using 60-day forward returns as the model target.
 
 ## Setup:
-source .venv/bin/activate (ALWAYS THIS)
+source .venv/bin/activate
 pip install -r requirements.txt
 
 ## Data:
@@ -57,8 +57,8 @@ The successful results were achieved using the following parameters:
 
 ## Final Performance Metrics:
 
-- Total Return: 37.76% [Source: Conservative Rank-ML Results].
-- CAGR: 1.23% [Source: Conservative Rank-ML Results].
-- Sharpe Ratio: 0.50 [Source: Conservative Rank-ML Results].
-- Max Drawdown: -5.15% [Source: Conservative Rank-ML Results].
-- Total Trades: 111 (entries + exits) [Source: Conservative]
+- Total Return: 37.76%.
+- CAGR: 1.23%.
+- Sharpe Ratio: 0.50.
+- Max Drawdown: -5.15%.
+- Total Trades: 111 (entries + exits).
