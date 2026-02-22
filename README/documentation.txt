@@ -1,0 +1,11 @@
+Script: src/ml_label_engineering.py
+-This script calculates the rolling rank of future returns. This is what the model attempts to predict during the training phase to generate its "probabilities" or "ranks."
+
+Script: src/ml_walkforward_train.py
+-This is the ridge regression code.This is code filters for specific market regimes, specifically focusing only on "risk-on" periods defined by a long-term moving average to improve signal quality.
+To ensure the model remains relevant over time, the system employs a rolling training window that iteratively learns from ten years of historical data to forecast the subsequent three years.
+	- Training Window: 10-year rolling windows.
+	- Testing Window: 3-year sliding windows.
+	- Model Pipeline: A Ridge Regression pipeline that includes scaling and regularisation to prevent over-fitting.
+	- Regime Constraint: The training and prediction logic are restricted to MA200 Risk-On regimes (Price > MA200), ensuring the model only seeks signals when market conditions are favorable
+
