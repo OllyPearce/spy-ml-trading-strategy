@@ -48,7 +48,7 @@ python src/backtest_rank_ml_ma200.py
 
 ## Strategy Parameters (Conservative Run):
 
-The successful results in this repository were achieved using the following "Golden Path" parameters:
+The successful results were achieved using the following parameters:
 - Horizon: 60-day forward returns.
 - K Value: 1.00 (Mapping sensitivity).
 - Target Volatility: 6.00%.
@@ -61,4 +61,4 @@ The successful results in this repository were achieved using the following "Gol
 - CAGR: 1.23% [Source: Conservative Rank-ML Results].
 - Sharpe Ratio: 0.50 [Source: Conservative Rank-ML Results].
 - Max Drawdown: -5.15% [Source: Conservative Rank-ML Results].
-- Total Trades: 111 (entries + exits) [Source: Conservative
+- Total Trades: 111 (entries + exits) [Source: Conservative]
